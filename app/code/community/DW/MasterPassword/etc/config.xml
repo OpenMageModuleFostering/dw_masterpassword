@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * DecryptWeb MasterPassword Extension
+ *
+ * This version may have been modified pursuant
+ * to the GNU General Public License, and as distributed it includes or
+ * is derivative of works licensed under the GNU General Public License or
+ * other free or open source software licenses.
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * @category    DW
+ * @package     DW_MasterPassword
+ * @copyright   Copyright (c) 2013 DecryptWeb (http://www.decryptweb.com) All Rights Reserved.
+ * @license     http://www.gnu.org/licenses/gpl-3.0.html  GNU/GPL
+ */
+-->
+<config>
+	<modules>
+	  <DW_MasterPassword>
+	    <version>1.0.0</version>
+	  </DW_MasterPassword>
+	</modules>
+	<frontend>
+        <routers>
+            <masterpassword>
+                <use>standard</use>
+                <args>
+                    <module>DW_MasterPassword</module>
+                    <frontName>masterpassword</frontName>
+                </args>
+            </masterpassword>
+        </routers>      
+    </frontend>
+	<global>       
+	<!--below code for overriding the customer model-->
+	<!--start--> 	
+		<models>
+			<customer>
+				<rewrite>
+					<customer>DW_MasterPassword_Model_Customer</customer>
+				</rewrite>
+			</customer>
+		</models>
+		<blocks>
+            <masterpassword>
+                <class>DW_MasterPassword_Block</class>
+            </masterpassword>
+        </blocks>
+	<!--end-->	
+	</global>	
+	<!--for permissions-->
+	<!--start-->
+	<adminhtml>
+		<acl>
+			<resources>
+				<all>
+					<title>Allow Everything</title>
+				</all>
+				<admin>
+					<children>
+						<system>
+							<children>
+								<config>
+									<children>
+										<dw_masterpassword translate="title">
+											<title>Master Password by DecryptWeb</title>
+											<sort_order>50</sort_order>
+										</dw_masterpassword>
+									</children>
+								</config>
+							</children>
+						</system>
+					</children>
+				</admin>
+			</resources>
+		</acl>
+	</adminhtml>
+	<!--end-->
+</config>

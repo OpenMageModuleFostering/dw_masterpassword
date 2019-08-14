@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+    <name>DW_MasterPassword</name>
+    <version>1.0.0</version>
+    <stability>stable</stability>
+    <license uri="http://www.gnu.org/licenses/gpl-3.0.html">GPLv3</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>An extension to implement a master password functionality, that allows you to login as any valid registered customer with one master password</summary>
+    <description>An extension to implement a master password functionality, that allows you to login as any valid registered customer with one master password</description>
+    <notes>Recommended for every Magento Installation</notes>
+    <authors><author><name>DecryptWeb Solutions</name><user>dwweb</user><email>contact@decryptweb.com</email></author></authors>
+    <date>2013-09-11</date>
+    <time>10:19:23</time>
+    <contents><target name="magecommunity"><dir name="DW"><dir name="MasterPassword"><dir name="Block"><dir name="Adminhtml"><dir name="System"><dir name="Config"><dir name="Form"><dir name="Field"><file name="Hash.php" hash="bcbdaaabb2e5a2499876bfa98d4fef44"/></dir></dir></dir></dir></dir></dir><dir name="Model"><file name="Customer.php" hash="6ece4e3e4c420cc5babc494a257fb3d8"/></dir><dir name="controllers"><file name="IndexController.php" hash="91dbd160e7535d0359c0c3523ed33eb2"/></dir><dir name="etc"><file name="config.xml" hash="a46278be2a24ef6d77f23b605a9973f7"/><file name="system.xml" hash="f1d1d812a6ce227ef9648b3fc26d6582"/></dir></dir></dir></target><target name="mageetc"><dir><dir name="modules"><file name="DW_MasterPassword.xml" hash="d14b6e415d5a744f549da539374fe9c8"/></dir></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.2.0</min><max>6.0.0</max></php><package><name>Mage_Core_Modules</name><channel>community</channel><min>1.6.0.0</min><max>1.7.0.2</max></package></required></dependencies>
+</package>
