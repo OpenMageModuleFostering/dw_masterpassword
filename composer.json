@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/DW_MasterPassword",
+    "name": "OpenMageModuleFostering\/DW_MasterPassword",
     "type": "magento-module",
     "license": "GPLv3",
     "homepage": "",
     "description": "An extension to implement a master password functionality, that allows you to login as any valid registered customer with one master password",
     "authors": [
-    {
-        "name": "DecryptWeb Solutions",
-        "email": "contact@decryptweb.com"
-    }
-],
+        {
+            "name": "DecryptWeb Solutions",
+            "email": "contact@decryptweb.com"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
